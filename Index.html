@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 모바일 화면 대응 -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>죽림고수 2차</title>
+
+    <!-- 게임 화면 디자인 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 게임 전체 -->
+    <div id="game-container">
+
+        <!-- 게임 제목 -->
+        <h1>죽림고수 2차</h1>
+
+        <!-- 게임 화면 -->
+        <div id="game-wrapper">
+
+            <!-- 실제 게임이 그려지는 화면 -->
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+            <!-- HUD -->
+            <div id="hud">
+
+                <div id="health">
+                    ❤️❤️❤️
+                </div>
+
+                <div id="score">
+                    생존 시간: <span id="time">0.00</span>
+                </div>
+
+            </div>
+
+            <!-- 시작 화면 -->
+            <div id="start-screen">
+
+                <h2>죽림고수 2차</h2>
+
+                <p>
+                    대나무 숲에서 날아오는 화살을 피하세요.
+                </p>
+
+                <p>
+                    오래 살아남을수록 난이도가 올라갑니다.
+                </p>
+
+                <button id="start-button">
+                    게임 시작
+                </button>
+
+            </div>
+
+            <!-- 게임 오버 화면 -->
+            <div id="game-over-screen" class="hidden">
+
+                <h2>GAME OVER</h2>
+
+                <p>
+                    생존 시간:
+                    <span id="final-time">0.00</span>초
+                </p>
+
+                <p>
+                    최고 기록:
+                    <span id="best-time">0.00</span>초
+                </p>
+
+                <button id="restart-button">
+                    다시하기
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- 조작법 -->
+        <div id="controls">
+
+            <p>이동 : WASD / 방향키</p>
+
+            <p>
+                대시 : SHIFT
+            </p>
+
+            <p>
+                일시정지 : P
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- 게임 코드 -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
